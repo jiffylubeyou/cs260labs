@@ -1,0 +1,21 @@
+h1, p {
+  background-color: #DDE0E3;
+ padding: 20px 0 20px 10px;
+  margin-bottom: 50px;  /* Light gray */
+}
+
+em, strong {
+  background-color: #B2D6FF;    /* Light blue */
+}
+p {
+	padding: 20px 0 20px 10px;
+  margin-bottom: 50px;
+  }
+  .synopsis {
+	  color: #7E8184;        /* Light gray */
+  font-style: italic;
+  }
+  #myID {
+	  color: #ff0000;
+  }
+
