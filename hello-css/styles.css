@@ -34,30 +34,16 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.header {
-  color: #F09A9D;
-  justify-content: center;
-  margin: 20px ;
-  padding: 10px;
-  text-align: center;
-}
-
 .paragraph {
-  color: #F09A9D;
-	padding: 50px;
+	padding: 100px;
 	display: flex;
-  justify-content: center;
-  text-align: center;
+	justify-content: right;
 }
 
 .imageSize > img {
   padding: 20px;
-	width: 500px;
-  height: 500px;
-  margin: auto;
-  justify-content: center;
-  text-emphasis: center;
-  display: block;
+	width: 400px;
+	height: 300px;
 }
 
 .review-header {
