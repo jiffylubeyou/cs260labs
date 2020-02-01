@@ -49,42 +49,12 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.paragraph {
-	padding: 100px;
-	display: flex;
-	justify-content: right;
-}
-
 .imageSize > img {
   padding: 20px;
 	width: 400px;
 	height: 300px;
 }
 
-.review-header {
-  color: #F09A9D;
-  font-size: large;
-  padding: 20px;
-  justify-content: center;
-}
-
-.review-paragraph {
-  color: black;
-  padding: 30px;
-  justify-content: center;
-}
-
-.about-header {
-  color: brown;
-  padding: 10px ;
-  font-size: x-large;
-  justify-content: center;
-}
-.about-paragraph {
-  color: black;
-  padding: 20px;
-  justify-content: center;
-}
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   body {
