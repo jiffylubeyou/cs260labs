@@ -6,10 +6,25 @@
 
 .menu-container {
   color: #fff;
-  background-color: #5995DA;  /* Blue */
+  background-color: tan;  /* Blue */
   padding: 20px 0;
   display: flex;
   justify-content: center;
+}
+
+.index-header {
+  color: aqua;
+  justify-content: center;
+  text-align: center;
+  font-size: xx-large;
+  margin: 50px;
+}
+.index-paragraph {
+  color: black;
+  justify-content: center;
+  text-align: center;
+  font-size: large;
+  padding: 50px;
 }
 
 .menu {
@@ -87,6 +102,6 @@
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
   body {
-    background-color: #B2D6FF; /* Blue */
+    background-color: chocolate; /* Blue */
   }
 }
