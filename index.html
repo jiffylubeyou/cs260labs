@@ -44,6 +44,45 @@
     <p><div class="index-paragraph">Use the naviagtion bar up top top to begin exploring!</div></p>
   </div>
     </p>
-    <footer>https://github.com/jiffylubeyou/cs260labs.git</footer>
-  </body>
+    <h1>Mountains</h1>
+    <table id="mountains">
+      <tr>
+        <th>name</th>
+        <th>height</th>
+        <th>place</th>
+      </tr>
+    </table>
+    </div>
+    <script>
+      const MOUNTAINS = [
+        {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+        {name: "Everest", height: 8848, place: "Nepal"},
+        {name: "Mount Fuji", height: 3776, place: "Japan"},
+        {name: "Vaalserberg", height: 323, place: "Netherlands"},
+        {name: "Denali", height: 6168, place: "United States"},
+        {name: "Popocatepetl", height: 5465, place: "Mexico"},
+        {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+      ];
+    for (let i = 0; i < MOUNTAINS.length; ++i)
+  {
+    console.log(MOUNTAINS[i])
+    // create a tr
+    var trNode = document.createElement('tr');
+    // create a td for each piece of data (name, height, place)
+    var tdName = document.createElement('td');
+    var tdHeight = document.createElement('td');
+    var tdPlace = document.createElement('td');
+    tdName.appendChild(document.createTextNode(MOUNTAINS[i].name));
+    tdHeight.appendChild(document.createTextNode(MOUNTAINS[i].height));
+    tdPlace.appendChild(document.createTextNode(MOUNTAINS[i].place));
+    // append each td to the tr
+    trNode.appendChild(tdName);
+    trNode.appendChild(tdHeight);
+    trNode.appendChild(tdPlace);
+    // append the tr to the table
+    var tableElement = document.getElementById("mountains");
+    tableElement.appendChild(trNode);
+    tdHeight.style.textAlign = "right";
+  }
+</script>
 </html>
