@@ -1,0 +1,22 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+#weatherResults{
+    color: midnightblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: midnightblue;
+    border-style: groove;
+    margin: 5em;
+}
+
+#forecastResults{
+    color: midnightblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer{
+    border: midnightblue;
+    border-top: groove;
+    color: midnightblue;
+}
