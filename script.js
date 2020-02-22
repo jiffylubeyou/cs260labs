@@ -3,45 +3,42 @@ document.getElementById("weatherSubmit").addEventListener("click", function (eve
     const value = document.getElementById("weatherInput").value;
     if (value === "")
         return;
-    const url = "http://api.openweathermap.org/data/2.5/weather?q=" + value + ",US&units=imperial" + "&APPID=e2cb65ce33e8ca1373542cdaa6d555c0";
+    const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + value;
     fetch(url)
         .then(function (response) {
             return response.json();
         }).then(function (json) {
+            console.log(json.meals[0]);
             let results = "";
-            results += '<h2>Weather in ' + json.name + "</h2>";
-            for (let i = 0; i < json.weather.length; i++) {
-                results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
+            for (var i = 0; i < json.meals.length; ++i)
+            {
+                results += '<h2>Recipe #' + (i + 1) + '</h2>';
+                results += '<h2>Ingredients</h2>';
+                results += '<ul>';
+                results += '<li>' + json.meals[i].strIngredient1 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient2 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient3 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient4 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient5 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient6 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient7 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient8 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient9 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient10 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient11 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient12 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient13 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient14 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient15 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient16 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient17 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient18 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient19 + '</li>';
+                results += '<li>' + json.meals[i].strIngredient20 + '</li>';
+                results += '</ul>';
+                results += '<h2>Ingredients</h2>';
+                results += json.meals[i].strInstructions + "</p>";
             }
-            results += '<h2>' + "Temperature: " + json.main.temp + " &deg;F</h2>"
-            results += '<h2>' + "Feels like: " + json.main.feels_like + " &deg;F</h2>"
-            results += '<h2>' + "Humidity: " + json.main.humidity + " &deg;F</h2>"
-            results += '<h2>' + "Pressure: " + json.main.pressure + " &deg;F</h2>"
-            results += "<p>"
-            for (let i = 0; i < json.weather.length; i++) {
-                results += json.weather[i].description
-                if (i !== json.weather.length - 1)
-                    results += ", "
-            }
-            results += "</p>";
-            document.getElementById("weatherResults").innerHTML = results;
-            console.log(json);
-        });
-    const url2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + ", US&units=imperial" + "&APPID=e2cb65ce33e8ca1373542cdaa6d555c0";
-    fetch(url2)
-        .then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            let forecast = "";
-            for (let i = 0; i < json.list.length; i++) {
-                forecast += "<h2>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
-                forecast += "<p>Temperature: " + json.list[i].main.temp + "</p>";
-                forecast += "<p>Feels like: : " + json.list[i].main.feels_like + "</p>";
-                forecast += "<p>Humidity: " + json.list[i].main.humidity + "</p>";
-                forecast += "<p>Pressure: " + json.list[i].main.pressure + "</p>";
-                forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>'
-            }
-            document.getElementById("forecastResults").innerHTML = forecast;
-            console.log(json);
+            document.getElementById("mealResults").innerHTML = results;
         });
 });
