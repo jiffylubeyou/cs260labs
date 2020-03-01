@@ -30,6 +30,7 @@
         active-color="#ff0000"
         v-bind:show-rating="false">
         </star-rating>
+        <p>Average Rating: {{average}}</p>
       <h3>Add a Comment</h3>
       <form v-on:submit.prevent="addComment">
         <input v-model="addedName" placeholder="Name"></p>
@@ -46,13 +47,13 @@
     </div>
   </div>
 
-  <footer> </footer>
+  <footer>https://github.com/jiffylubeyou/cs260labs.git</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
-  <script src="./script.js"></script>
   <script src="./moment.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

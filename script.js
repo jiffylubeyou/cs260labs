@@ -105,8 +105,16 @@ let app = new Vue({
           month[10] = "November";
           month[11] = "December";
           return month[this.current.month - 1];
+        },
+      average() {
+        var average = 0;
+        if (this.number in this.ratings) {
+          average =
+            this.ratings[this.number].sum / this.ratings[this.number].total;
         }
-      },
+        return average;
+      }
+    },
       watch: {
         number(value, oldvalue) {
           if (oldvalue === '') {
