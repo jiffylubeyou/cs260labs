@@ -1,12 +1,11 @@
-# Vue XKCD Browser
+# Grocery Store
 
-In this assignment, you will use Vue to build an application that uses
-an API to browse XKCD comics.
+In this assignment, you will use Vue to build the front end for a grocery store.
 
 ## Starting the lab
 
 To start the lab, you must follow this [GitHub Classroom
-link](https://classroom.github.com/a/pKu-YND2). This will create a
+link](https://classroom.github.com/a/pRm_xJGz). This will create a
 private repository for you using our classroom site. We will only
 grade repositories created and submitted this way.
 
@@ -17,41 +16,20 @@ laptop or other working environment.
 
 ## Tutorial
 
-Use the [tutorial](/TUTORIAL.md)
-to create the application. This will help you create most
+Use the [tutorials](/tutorials)
+to create the store. This will help you create most
 of the functionality. Once you are done, your lab should look like this:
 
-![xkcd](images/xkcd.png)
+![xkcd](/screenshots/search-box.png)
 
 ## Additional Functionality
 
-Once you complete the tutorial, add the following functionality:
+The second-to-last step of the tutorial contains a list of additional functionality to add.
 
-### More navigation buttons
+## Installing on Digital Ocean
 
-Add buttons to navigate to the first comic and the last comic.
-
-### Date and time for comments
-
-Add the current date and time to every comment that is created, then
-show the current date and time after or below the author's name. You may want to use the [moment](https://momentjs.com/) library to  help you format the date and time.
-
-### Star rating
-
-Add the ability for people to rate the cartoon. Display the average
-rating accumulated so far. The average should be separate for each cartoon.
-
-Use this [star rating library for
-Vue](https://github.com/craigh411/vue-star-rating).
-
-Use this [star ratings tutorial](/STAR-RATINGS.md) for help.
-
-Change the options on the star rating library so that it increments in
-steps of 0.5, does not show the current rating, and uses red stars.
-
-When you're done, it should look like this:
-
-![rating](images/rating.png)
+It takes a little extra to install a Vue CLI front end on Digital Ocean. The last
+step of the tutorial will walk you through this.
 
 ## Link to GitHub repository
 
@@ -71,6 +49,7 @@ rubric:
 Item | Points
 --- | ---
 The material in the tutorial works | 70
-Buttons for first and last comic work | 10
-Date and time for comments work | 10
-Star ratings work | 10
+You can add items to the shopping cart and show the number of cart items in the menu | 10
+You can click on the cart menu and show a page with the items in the cart | 10
+You can remove items from the cart and show an empty cart message if there are no items | 10
+Extra credit -- your cart includes quantities, for example showing 5 lemons and 2 oranges | 10
